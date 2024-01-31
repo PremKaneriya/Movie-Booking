@@ -9,25 +9,15 @@ const handleDelete = async (id) => {
 }
 
 const handleUpdate = async (obj) => {
-    try {
         let data = JSON.parse(obj);
         console.log(data);
 
+        document.getElementById('id').value = data.id;
         document.getElementById('name').value = data.name;
         document.getElementById('email').value = data.email;
         document.getElementById('age').value = data.age;
         document.getElementById('status').value = data.status;
 
-        const response = await fetch(`http://localhost:3000/users/${data.status}`, {
-            method: "PUT",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(...data)
-        });
-    } catch (error) {
-        console.log(error);
-    }
 }
 
 const handleDisplay = async () => {
@@ -40,18 +30,18 @@ const handleDisplay = async () => {
         let print = '<table border="1"><tr><th>Name</th><th>Email</th><th>Age</th><th>Status</th><th>Action</th></tr>';
 
         data.map((v) => {
-            print += `
-                <tr>
-                    <td>${v.name}</td>
-                    <td>${v.email}</td>
-                    <td>${v.age}</td>
-                    <td>${v.status}</td>
-                    <td>
-                        <i onclick="handleUpdate('${JSON.stringify(v)}')" class="fa-solid fa-pen-to-square"></i>
-                        <i onclick="handleDelete('${v.id}')" class="fa-solid fa-trash"></i>
-                    </td>
-                </tr>`;
+            print += '<tr>';
+            print += `<td>${v.name}</td>`;
+            print += `<td>${v.email}</td>`;
+            print += `<td>${v.age}</td>`;
+            print += `<td>${v.status}</td>`;
+            print += '<td>';
+            print += `<i onclick=handleUpdate('${JSON.stringify(v)}') class="fa-solid fa-pen-to-square"></i>`;
+            print += `<i onclick="handleDelete('${v.id}')" class="fa-solid fa-trash"></i>`;
+            print += '</td>';
+            print += '</tr>';
         });
+        
 
         print += `</table>`;
 
@@ -61,6 +51,34 @@ const handleDisplay = async () => {
         console.log(error);
     }
 }
+
+const handleUpdateStatus = async () => {
+    const id = document.getElementById('id').value;
+    const status = document.getElementById('status').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const age = document.getElementById('age').value;
+
+    let obj = {
+        id,
+        status,
+        name,
+        email,
+        age
+    }
+
+    await fetch(`http://localhost:3000/users/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(obj)
+    });
+}
+
+const userForm = document.getElementById('userForm');
+
+userForm.addEventListener('submit', handleUpdateStatus);
 
 window.onload = () => {
     handleDisplay();
