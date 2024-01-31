@@ -37,7 +37,8 @@ const handleRegisterForm = async () => {
         name,
         age,
         email,
-        password
+        password,
+        "status":"pending"
     }
 
     const response = await fetch('http://localhost:3000/users', {

@@ -1,25 +1,12 @@
 {
   "users": [
     {
-      "id": "cb92",
-      "name": "harry potter",
-      "age": "8",
-      "email": "jameshdjfi@gmail.com",
-      "password": "sdfghjkl"
-    },
-    {
-      "id": "cb92",
-      "name": "harry potter",
-      "age": "8",
-      "email": "jameshdjfi@gmail.com",
-      "password": "sdfghjkl"
-    },
-    {
-      "id": "cb92",
-      "name": "harry potter",
-      "age": "8",
-      "email": "jameshdjfi@gmail.com",
-      "password": "sdfghjkl"
+      "id": "1ec9",
+      "name": "Prem Kaneriya ",
+      "age": "9",
+      "email": "premlenovo9two@gmail.com",
+      "password": "james@1234",
+      "status": "pending"
     }
   ]
 }
