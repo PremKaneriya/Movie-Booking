@@ -5,129 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/localStyle.css">
 </head>
 
 <body>
 
-    <form class="login" id="loginForm">
-        <input type="email" id="email" placeholder="Enter Email">
-        <input type="password" id="password" placeholder="Enter Password">
-        <input type="submit" id="buttonsbtn">
-    </form>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.peacocktv.com/dam/commerce/assets/_devices/Appletv.png?downsize=1200:*&output-format=webp&output-quality=70"
+                    alt="Movie Booking Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Theaters</a></li>
+                <li><a href="#">Standups</a></li>
+                <li><a href="/register.html">Register</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="main">
+        <form class="login" id="loginForm">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter Password">
+            <input type="submit" id="buttonsbtn">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+    </div>
 
     <script src="assets/js/login.js"></script>
 </body>
 <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/bourbon/5.0.0/bourbon.min.css");
-
-    #email,
-    #password {
-        border: 1.5px solid #C7F0BD;
+    /* General styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Colors */
-    :root {
-        --greenSeaweed: rgba(2, 128, 144, 1);
-        --blueQueen: rgba(69, 105, 144, 1);
-        --redFire: rgba(244, 91, 105, 1);
-    }
-
-    /* Fonts */
-    body {
-        background-color:#9FA4C4;
-        font-family: 'Asap', sans-serif;
-    }
-
-    .login {
-        overflow: hidden;
-        background-color: #B3CDD1;
-        padding: 40px 30px 30px 30px;
-        border-radius: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 400px;
-        transform: translate(-50%, -50%);
-        transition: transform 300ms, box-shadow 300ms;
-        box-shadow: 5px 10px 10px rgba(var(--greenSeaweed), 0.2);
-    }
-
-    .login::before,
-    .login::after {
-        content: '';
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        border-top-left-radius: 40%;
-        border-top-right-radius: 45%;
-        border-bottom-left-radius: 35%;
-        border-bottom-right-radius: 40%;
-        z-index: -1;
-    }
-
-    .login::before {
-        left: 40%;
-        bottom: -130%;
-        background-color: rgba(var(--blueQueen), 0.15);
-        animation: wawes 6s infinite linear;
-    }
-
-    .login::after {
-        left: 35%;
-        bottom: -125%;
-        background-color: rgba(var(--greenSeaweed), 0.2);
-        animation: wawes 7s infinite;
-    }
-
-    .login>input {
-        font-family: 'Asap', sans-serif;
-        display: block;
-        border-radius: 5px;
-        font-size: 16px;
-        background: white;
+    #main {
+        height: 89vh;
         width: 100%;
-        border: 0;
-        padding: 10px 10px;
-        margin: 15px -10px;
+        background-image: url(https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 100px 0px;
     }
 
-    .login>#buttonsbtn {
-        font-family: 'Asap', sans-serif;
-        cursor: pointer;
-        color: #000;
+    /* Login form styles */
+    .login {
+        width: 450px;
+        margin: 0px auto;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 36px 35px;
+        background-color: #05082c;
+        box-shadow: 10px 10px 30px #fff;
+        color: #eee;
+        font-family: Arial, sans-serif;
+    }
+
+    .login input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
         font-size: 16px;
-        text-transform: uppercase;
-        width: 80px;
-        border: 0;
-        padding: 10px 0;
-        margin-top: 10px;
-        margin-left: -5px;
-        border-radius: 5px;
-        background-color: #9FA4C4;
-        transition: background-color 300ms;
+        padding: 10px;
+        margin-top: 31px;
     }
 
-    .login>#buttonsbtn:hover {
-        background-color: #C7F0BD;
+    .login input[type="email"],
+    .login input[type="password"] {
+        background-color: #22254b;
+        color: #eee;
     }
 
-    @keyframes wawes {
-        from {
-            transform: rotate(0);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
+    .login input[type="email"]::placeholder,
+    .login input[type="password"]::placeholder {
+        color: #afb2dc;
     }
 
-    a {
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.6);
-        position: absolute;
-        right: 10px;
-        bottom: 10px;
-        font-size: 12px;
+    .login input[type="submit"] {
+        background-color: #0d1dd2;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .login input[type="submit"]:hover {
+        background-color: #0a0f9c;
+    }
+
+    p {
+        padding: 22px 0px 0px 0px;
     }
 </style>
+
 </html>

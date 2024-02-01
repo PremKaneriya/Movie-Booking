@@ -15,9 +15,8 @@ const handleLoginForm = async () => {
 
         data.map((v) => {
             if (email === v.email && password === v.password) {
-                flag = 1;
                 if (v.status === 'active') {
-                   
+                    flag = 1;
                 } else {
                     flag = 2
                 }

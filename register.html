@@ -9,6 +9,25 @@
 
 <body>
 
+    <div class="container">
+        <div class="content">
+            <button onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed')">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div id="head">
+                <p class="logo">USER ADMIN</p>
+            </div>
+            <ul class="list">
+                <li><a href="./admin/registerAdmin.html">Home</a></li>
+                <li><a href="../register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
     <form action="" id="registerForm">
         <input type="text" id="name" placeholder="Enter Name">
         <br><br>
@@ -18,6 +37,9 @@
         <br><br>
         <input type="password" id="password" placeholder="Enter Password">
         <br><br>
+        <span>Profile_Pic</span>
+        <input type="file" name="profile_pic" id="profile_pic">
+        <br><br>
         <input type="submit">
     </form>
 
@@ -25,57 +47,147 @@
 
     <script src="assets/js/register.js"></script>
 </body>
+
 <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #84A9C0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-    }
+    /* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    #registerForm {
-        background-color: #B3CBB9;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
 
-    input {
-        width: 100%;
-        padding: 11px 42px 10px 20px;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+/* Content styles */
+.content {
+    flex: 1;
+    background-color: #05082c;
+    color: #eee;
+    font-family: Arial, sans-serif;
+}
 
-    input[type="submit"] {
-        background-color: #4caf50;
-        color: #fff;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+/* Button styles */
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
 
-    input[type="submit"]:hover {
-        background-color: #45a049;
-        border: 1px solid #206123;
-    }
+button div {
+    width: 25px;
+    height: 3px;
+    background-color: #eee;
+    margin: 3px;
+}
 
-    /* Optional: Add some additional styling for better aesthetics */
-    h1 {
-        text-align: center;
-        color: #333;
-    }
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #22254b;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    transition: width 0.5s ease;
+}
 
-    /* Optional: Add media query for responsiveness */
-    @media (max-width: 600px) {
-        #registerForm {
-            width: 80%;
-        }
-    }
+.sidebar.collapsed {
+    width: 0;
+}
+
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 18px;
+}
+
+/* Form styles */
+#registerForm {
+    width: 400px;
+    margin: 20px auto;
+    border: 2px solid #22254b;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #05082c;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+#registerForm input,
+#registerForm select,
+#registerForm span {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #22254b;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+#registerForm input::placeholder,
+#registerForm select::placeholder {
+    color: #afb2dc;
+}
+
+#registerForm select {
+    appearance: none;
+}
+
+#registerForm input[type="file"] {
+    cursor: pointer;
+}
+
+#registerForm input[type="submit"] {
+    background-color: #0d1dd2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#registerForm input[type="submit"]:hover {
+    background-color: #0a0f9c;
+}
+
+#registerForm br {
+    margin: 10px 0;
+}
+
 </style>
 
 </html>
