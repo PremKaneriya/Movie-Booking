@@ -5,189 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/localStyle.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="content">
-            <button onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed')">
-                <div></div>
-                <div></div>
-                <div></div>
-            </button>
-        </div>
-        <div class="sidebar" id="sidebar">
-            <div id="head">
-                <p class="logo">USER ADMIN</p>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.peacocktv.com/dam/commerce/assets/_devices/Appletv.png?downsize=1200:*&output-format=webp&output-quality=70"
+                    alt="Movie Booking Logo">
             </div>
-            <ul class="list">
-                <li><a href="./admin/registerAdmin.html">Home</a></li>
-                <li><a href="../register.html">Register</a></li>
+            <ul class="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Theaters</a></li>
+                <li><a href="/register.html">Register</a></li>
+                <li><a href="/login.html">Login</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 
     <form action="" id="registerForm">
         <input type="text" id="name" placeholder="Enter Name">
-        <br><br>
+        <br>
         <input type="number" id="age" placeholder="Enter Age">
-        <br><br>
+        <br>
         <input type="email" id="email" placeholder="Enter Email">
-        <br><br>
+        <br>
         <input type="password" id="password" placeholder="Enter Password">
-        <br><br>
-        <span>Profile_Pic</span>
+        <br>
+        Upload Profile
         <input type="file" name="profile_pic" id="profile_pic">
-        <br><br>
+        <br>
         <input type="submit">
     </form>
 
-    <div id="display"></div>
-
     <script src="assets/js/register.js"></script>
 </body>
-
 <style>
-    /* Reset styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #eee;
+        height: 100vh;
+        background-image: url(https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-/* Container styles */
-.container {
-    display: flex;
-    height: 100vh;
-    position: relative;
-}
+    #registerForm {
+        background-color: #05082C;
+        padding: 37px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin: 1% auto;
+        width: 400px;
+        border: 2px solid #fff;
+        box-shadow: 10px 10px 30px #fff;
+    }
 
-/* Content styles */
-.content {
-    flex: 1;
-    background-color: #05082c;
-    color: #eee;
-    font-family: Arial, sans-serif;
-}
+    h1 {
+        color: #fff;
+    }
 
-/* Button styles */
-button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px;
-}
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-button div {
-    width: 25px;
-    height: 3px;
-    background-color: #eee;
-    margin: 3px;
-}
+    input,
+    span {
+        padding: 13px;
+        margin: 5px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #22254b;
+        color: #eee;
+    }
 
-/* Sidebar styles */
-.sidebar {
-    width: 250px;
-    background-color: #22254b;
-    color: #eee;
-    font-family: Arial, sans-serif;
-    transition: width 0.5s ease;
-}
+    input[type="submit"] {
+        background-color: #0d1dd2;
+        color: #fff;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-.sidebar.collapsed {
-    width: 0;
-}
+    input[type="submit"]:hover {
+        background-color: #0a0f9c;
+    }
 
-#head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.list {
-    list-style: none;
-    padding: 0;
-}
-
-.list li {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.list li a {
-    text-decoration: none;
-    color: #eee;
-    font-size: 18px;
-}
-
-/* Form styles */
-#registerForm {
-    width: 400px;
-    margin: 20px auto;
-    border: 2px solid #22254b;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #05082c;
-    color: #eee;
-    font-family: Arial, sans-serif;
-    position: absolute;
-    top: 0;
-    left: 25%;
-}
-
-#registerForm input,
-#registerForm select,
-#registerForm span {
-    width: 100%;
-    height: 40px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 10px;
-    background-color: #22254b;
-    color: #eee;
-    margin-bottom: 10px;
-}
-
-#registerForm input::placeholder,
-#registerForm select::placeholder {
-    color: #afb2dc;
-}
-
-#registerForm select {
-    appearance: none;
-}
-
-#registerForm input[type="file"] {
-    cursor: pointer;
-}
-
-#registerForm input[type="submit"] {
-    background-color: #0d1dd2;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#registerForm input[type="submit"]:hover {
-    background-color: #0a0f9c;
-}
-
-#registerForm br {
-    margin: 10px 0;
-}
-
+    span {
+        margin-top: 10px;
+        color: #fff;
+    }
 </style>
 
 </html>

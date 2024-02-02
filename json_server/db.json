@@ -1,26 +1,47 @@
 {
   "users": [
     {
-      "id": "5e4d",
-      "name": "fghjk",
-      "email": "premlenovo9two@gmail.com",
-      "age": "445",
-      "status": "active",
-      "password": "erftgyhjkl",
-      "profilePicture": "users/dummy2.jpeg",
-      "createdAt": "Thu Feb 01 2024 22:48:37 GMT+0530 (India Standard Time)",
-      "updatedAt": "Thu Feb 01 2024 22:48:37 GMT+0530 (India Standard Time)"
+      "id": "28af",
+      "name": "harry potter",
+      "age": "3456",
+      "email": "dfghjk@gmail.com",
+      "password": "sdfghjkl;",
+      "profilePicture": "users/dummy1.jpeg",
+      "createdAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
+      "updatedAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
+      "status": "active"
+    }
+  ],
+  "cinema": [
+    {
+      "id": "b09d",
+      "name": "dr world",
+      "image": "cinema-halls/cinema-halls1.jpg",
+      "address": "Deepkama, mota varachha",
+      "phoneNumber": "14",
+      "email": "inox@gmail.com",
+      "createdAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)",
+      "updatedAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)"
     },
     {
-      "id": "10ea",
-      "name": "new",
-      "email": "new@gmail.com",
-      "age": "67",
-      "status": "pending",
-      "password": "sdfghjkl",
-      "profilePicture": "users/dummy1.jpeg",
-      "createdAt": "Thu Feb 01 2024 12:53:03 GMT+0530 (India Standard Time)",
-      "updatedAt": "Thu Feb 01 2024 12:53:03 GMT+0530 (India Standard Time)"
+      "id": "87ef",
+      "name": "pvr",
+      "image": "cinema-halls/national-cinema-day-cinema-enthusiasts-can-be-a-part-of-a-movie-marathon-at-just-rs-99.webp",
+      "address": "Deepkama, mota varachha",
+      "phoneNumber": "9876789",
+      "email": "inox@gmail.com",
+      "createdAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)",
+      "updatedAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "da5b",
+      "name": "Raj emprial",
+      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
+      "address": "vesu",
+      "phoneNumber": "889900",
+      "email": "rajemp@gmail.com",
+      "createdAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)",
+      "updatedAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)"
     }
   ]
 }
