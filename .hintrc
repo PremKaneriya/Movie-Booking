@@ -23,6 +23,23 @@
         "button-name": "off"
       }
     ],
-    "no-inline-styles": "off"
-  }
+    "no-inline-styles": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "background-image: -webkit-image-set(url(",
+          "background-image: -webkit-image-set(url(",
+          "background-image: -webkit-image-set(url(",
+          "background-image: -webkit-image-set(url("
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 119",
+    "not firefox <= 120"
+  ]
 }
