@@ -14,34 +14,24 @@
   ],
   "cinema": [
     {
-      "id": "b09d",
-      "name": "dr world",
+      "name": "oook",
       "image": "cinema-halls/cinema-halls1.jpg",
       "address": "Deepkama, mota varachha",
-      "phoneNumber": "14",
+      "phoneNumber": "88",
       "email": "inox@gmail.com",
-      "createdAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)"
+      "createdAt": "Sat Feb 03 2024 11:26:18 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 03 2024 11:26:18 GMT+0530 (India Standard Time)",
+      "id": "87ef"
     },
     {
-      "id": "87ef",
       "name": "pvr",
-      "image": "cinema-halls/national-cinema-day-cinema-enthusiasts-can-be-a-part-of-a-movie-marathon-at-just-rs-99.webp",
+      "image": "cinema-halls/cinema-halls1.jpg",
       "address": "Deepkama, mota varachha",
-      "phoneNumber": "9876789",
-      "email": "inox@gmail.com",
-      "createdAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)"
-    },
-    {
-      "id": "da5b",
-      "name": "Raj emprial",
-      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
-      "address": "vesu",
-      "phoneNumber": "889900",
-      "email": "rajemp@gmail.com",
-      "createdAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)"
+      "phoneNumber": "2",
+      "email": "dfghjk@gmail.com",
+      "createdAt": "Sat Feb 03 2024 11:17:47 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 03 2024 11:17:47 GMT+0530 (India Standard Time)",
+      "id": "50da"
     }
   ]
 }
