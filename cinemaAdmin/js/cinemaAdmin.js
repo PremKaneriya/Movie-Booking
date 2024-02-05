@@ -1,4 +1,24 @@
-const handleUpdate = async (id) => { };
+const handleUpdate = async (id) => {
+    try {
+        const response = await fetch(`http://localhost:3000/cinema`);
+        const data = await response.json();
+
+        const userfind = data.find((v) => v.id === id);
+
+        console.log(userfind);
+
+        document.getElementById("id").value = userfind.id;
+        document.getElementById("cinemaName").value = userfind.name;
+        document.getElementById("cinemaAddress").value = userfind.address;
+        document.getElementById("cinemaPhoneNumber").value = userfind.phoneNumber;
+        document.getElementById("cinemaEmail").value = userfind.email;
+        document.getElementById('status').value = userfind.status;
+
+
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const handleDelete = async (id) => {
     try {
@@ -19,7 +39,10 @@ const handleCinemaAdmin = async () => {
     const image = document.getElementById("cinemaImage").value;
     const address = document.getElementById("cinemaAddress").value;
     const phoneNumber = document.getElementById("cinemaPhoneNumber").value;
+    const id = document.getElementById("id").value;
     const email = document.getElementById("cinemaEmail").value;
+    const status = document.getElementById('status').value;
+    
 
     const cinArr = image.split("\\");
 
@@ -34,24 +57,44 @@ const handleCinemaAdmin = async () => {
         email,
         createdAt,
         updatedAt,
+        status: status || "pending", 
     };
 
-    try {
-        const response = await fetch("http://localhost:3000/cinema", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(obj),
-        });
-        const data = await response.json();
+    if (id) {
+        try {
+            const response = await fetch("http://localhost:3000/cinema/" + id, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(obj),
+            });
 
-        console.log(data);
+            const data = await response.json();
+        } catch (error) {
+            console.error(error);
+        }
+    } else {
+        try {
+            const response = await fetch("http://localhost:3000/cinema", {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(obj),
+            });
 
-        displayCinemaData();
-    } catch (error) {
-        console.log(error);
+            const data = await response.json();
+
+        } catch (error) {
+            console.error(error);
+        }
     }
+
+
+
+    displayCinemaData();
+
 };
 
 const displayCinemaData = async () => {
@@ -63,12 +106,12 @@ const displayCinemaData = async () => {
 
         let print = "";
 
-        print += `<table border="1"> <tr><th>Cinema Name</th><th>Cinema Image</th><th>Cinema Address</th><th>Cinema Phone Number</th><th>Cinema Email</th><th>Actions</th></tr>`;
+        print += `<table border="1"> <tr><th>Cinema Name</th><th>Cinema Image</th><th>Cinema Address</th><th>Cinema Phone Number</th><th>Cinema Email</th><th>Status</th><th>Actions</th></tr>`;
 
         cinemaData.map((v) => {
-            print += `<tr><td>${v.name}</td><td><img src="../assets/images/${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td>`;
-            print += `<td><i onclick="handleDelete('${v.id}')" class="fa-solid fa-trash "></i>`;
-            print += `<i onclick="handleUpdate('${v.id}')" class="fa-solid fa-pen-to-square"></i></td></tr>`;
+            print += `<tr><td>${v.name}</td><td><img src="../assets/images/${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td> <td>${v.status}</td>`;
+            print += `<td><i onclick="handleDelete('${v.id}')" style="color: #fff;" class="fa-solid fa-trash "></i>`;
+            print += `<i onclick="handleUpdate('${v.id}')" style="color: #fff;" class="fa-solid fa-pen-to-square"></i></td></tr>`;
         });
 
         print += "</table>";

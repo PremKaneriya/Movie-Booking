@@ -32,6 +32,7 @@
         </div>
     </div>
     <form id="cinemaAdmin">
+        <input type="hidden" id="id" />
         <input type="text" id="cinemaName" placeholder="Enter Cinema Name" />
         <br />
         <span>Select Cinema Image</span>
@@ -42,6 +43,11 @@
         <br />
         <input type="number" id="cinemaPhoneNumber" placeholder="Enter Cinema PhoneNumber" />
         <br />
+        <select id="status">
+            <option value="">-- Select Status --</option>
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
+        </select>
         <input type="email" id="cinemaEmail" placeholder="Enter Cinema Email" />
         <br />
         <input type="submit" />
@@ -52,6 +58,8 @@
     <script src="js/cinemaAdmin.js"></script>
 </body>
 <style>
-
+#cinemaTable {
+    margin: 20px;
+}
 </style>
 </html>

@@ -26,6 +26,7 @@ const handleLoginForm = async () => {
 
         if (flag === 1) {
             console.log('Login Successful');
+            window.location.href = 'index.html';
         } else if (flag === 2) {
             console.log('inactive status');
         } else {
@@ -42,3 +43,7 @@ const handleLoginForm = async () => {
 
 const loginForm = document.getElementById('loginForm');
 loginForm.addEventListener('submit', handleLoginForm)
+
+window.onload = () => {
+    handleLoginForm();
+}

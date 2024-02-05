@@ -10,38 +10,41 @@
       "createdAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
       "updatedAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
       "status": "active"
+    },
+    {
+      "id": "3933",
+      "name": "Prem Kaneriya",
+      "age": "20",
+      "email": "premkaneriya@gmail.com",
+      "password": "premorem",
+      "profilePicture": "users/dummy1.jpeg",
+      "createdAt": "Sun Feb 04 2024 10:38:27 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sun Feb 04 2024 10:38:27 GMT+0530 (India Standard Time)",
+      "status": "active"
     }
   ],
   "cinema": [
     {
-      "id": "b09d",
-      "name": "dr world",
+      "name": "finder cinema",
       "image": "cinema-halls/cinema-halls1.jpg",
-      "address": "Deepkama, mota varachha",
-      "phoneNumber": "14",
-      "email": "inox@gmail.com",
-      "createdAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 16:45:20 GMT+0530 (India Standard Time)"
+      "address": "mota varachha",
+      "phoneNumber": "123",
+      "email": "finder@gmail.com",
+      "createdAt": "Mon Feb 05 2024 10:18:38 GMT+0530 (India Standard Time)",
+      "updatedAt": "Mon Feb 05 2024 10:18:38 GMT+0530 (India Standard Time)",
+      "status": "inactive",
+      "id": "ee89"
     },
     {
-      "id": "87ef",
-      "name": "pvr",
-      "image": "cinema-halls/national-cinema-day-cinema-enthusiasts-can-be-a-part-of-a-movie-marathon-at-just-rs-99.webp",
-      "address": "Deepkama, mota varachha",
-      "phoneNumber": "9876789",
-      "email": "inox@gmail.com",
-      "createdAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 17:44:06 GMT+0530 (India Standard Time)"
-    },
-    {
-      "id": "da5b",
-      "name": "Raj emprial",
-      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
+      "name": "db",
+      "image": "cinema-halls/cinema-halls1.jpg",
       "address": "vesu",
-      "phoneNumber": "889900",
-      "email": "rajemp@gmail.com",
-      "createdAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)",
-      "updatedAt": "Fri Feb 02 2024 17:51:18 GMT+0530 (India Standard Time)"
+      "phoneNumber": "45678",
+      "email": "vegamovies@gmail.com",
+      "createdAt": "Mon Feb 05 2024 10:18:30 GMT+0530 (India Standard Time)",
+      "updatedAt": "Mon Feb 05 2024 10:18:30 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "37bc"
     }
   ]
 }

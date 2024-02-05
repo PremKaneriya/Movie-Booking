@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/localStyle.css">
 </head>
 
@@ -12,7 +15,7 @@
 
   <nav class="navbar">
     <div class="container">
-      <div class="logo">
+      <div class="logoNav">
         <img
           src="https://www.peacocktv.com/dam/commerce/assets/_devices/Appletv.png?downsize=1200:*&output-format=webp&output-quality=70"
           alt="Movie Booking Logo">
@@ -41,10 +44,22 @@
           src="https://assetscdn1.paytm.com/images/catalog/view_item/2454959/1706076578417.jpg?format=webp&imwidth=922"
           alt="Slide 3">
       </div>
+      <div class="slide">
+        <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1706867268798_sonuweb.jpg" alt="Slide 3">
+      </div>
+      <div class="slide">
+        <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1706855571276_moviesat99web.jpg" alt="Slide 3">
+      </div>
+      <div class="slide">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2465722/1706811954382.jpg?format=webp&imwidth=803" alt="Slide 3">
+      </div>
+      <div class="slide">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2465377/1706813296995.jpg?format=webp&imwidth=803" alt="Slide 3">
+      </div>
     </div>
   </div>
 
-  <!-- -- video -- -->
+  <!-- --full page slider -- -->
 
 
   <!-- Movie slide -->
@@ -146,8 +161,7 @@
         </div>
       </div>
       <div class="movie-details">
-        <img
-          src="https://cdn.moviefone.com/admin-uploads/posters/thegrayman-movie-poster_1653419562.jpg?d=360x540&q=60"
+        <img src="https://cdn.moviefone.com/admin-uploads/posters/thegrayman-movie-poster_1653419562.jpg?d=360x540&q=60"
           alt="Movie Poster">
         <div class="movie-title">
           <h1>Grey Man</h1>
@@ -209,11 +223,11 @@
     <video src="/assets/videos/videoplayback.mp4" autoplay loop muted></video>
   </div> -->
 
-  <div id="imgdiv">
+  <!-- <div id="imgdiv">
     <img
       src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png"
       alt="">
-  </div>
+  </div> -->
 
   <section id="MainmovieDetails">
     <h1 id="moviePageName">Book StandUps Shows</h1>
@@ -282,9 +296,77 @@
   </section>
 
 
+  <footer class="footer-distributed">
 
+    <div class="footer-left">
+
+      <img id="appleFooter" style="height: 20vh;"
+        src="https://www.peacocktv.com/dam/commerce/assets/_devices/Appletv.png?downsize=1200:*&output-format=webp&output-quality=70"
+        alt="">
+
+      <p class="footer-links">
+        <a href="#" class="link-1">Home</a>
+
+        <a href="#">Seller</a>
+
+        <a href="#">Pricing</a>
+
+        <a href="#">About</a>
+
+        <a href="#">pages</a>
+
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">Sell Cart Pvt Ltd © 2015</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1.555.555.5555</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">support@company.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p style="color: white;" class="footer-company-about">
+        <span>About the company</span>
+        E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of funds
+        or data, over an electronic network, primarily the internet.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa-brands fa-cc-apple-pay" style="color: #f5f8fc;"></i></a>
+        <a href="#"><i class="fa-brands fa-paypal" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-discord" style="color: #fbfcfd;"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>
 
   <script>
+
+
+
+    // ----------- full page slider ----
+
     const slider = document.getElementById('movie-slider');
 
     function slide() {
@@ -324,12 +406,205 @@
 
 </body>
 <style>
+  /* --------------------- */
+  #appleFooter {
+    margin: -3px -54px;
+  }
+
+  .footer-distributed {
+    background: #05082c;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Footer left */
+
+  .footer-distributed .footer-left {
+    width: 40%;
+  }
+
+  /* The company logo */
+
+  .footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+
+  .footer-distributed h3 span {
+    color: lightseagreen;
+  }
+
+  /* Footer links */
+
+  .footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+
+  .footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer-distributed .footer-company-name {
+    color: #ccc;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  /* Footer Center */
+
+  .footer-distributed .footer-center {
+    width: 35%;
+  }
+
+  .footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+
+  .footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+  }
+
+  .footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .footer-distributed .footer-center p a {
+    color: lightseagreen;
+    text-decoration: none;
+    ;
+  }
+
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+
+  /* Footer Right */
+
+  .footer-distributed .footer-right {
+    width: 20%;
+  }
+
+  .footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 880px) {
+
+    .footer-distributed {
+      font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+      margin-left: 0;
+    }
+
+  }
+
+  .logo {
+    height: 10vh;
+    width: 10vh;
+  }
+
   #imgdiv {
     background-color: #05082c;
   }
 
   #imgdiv img {
-    padding: 30px 10px 0px 14px;
+    padding: 29px 40px 0px 46px;
     border-radius: 26px;
   }
 
