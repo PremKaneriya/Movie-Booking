@@ -10,28 +10,41 @@
       "createdAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
       "updatedAt": "Fri Feb 02 2024 10:56:30 GMT+0530 (India Standard Time)",
       "status": "active"
+    },
+    {
+      "id": "3933",
+      "name": "Prem Kaneriya",
+      "age": "20",
+      "email": "premkaneriya@gmail.com",
+      "password": "premorem",
+      "profilePicture": "users/dummy1.jpeg",
+      "createdAt": "Sun Feb 04 2024 10:38:27 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sun Feb 04 2024 10:38:27 GMT+0530 (India Standard Time)",
+      "status": "active"
     }
   ],
   "cinema": [
     {
-      "name": "oook",
+      "name": "finder cinema",
       "image": "cinema-halls/cinema-halls1.jpg",
-      "address": "Deepkama, mota varachha",
-      "phoneNumber": "88",
-      "email": "inox@gmail.com",
-      "createdAt": "Sat Feb 03 2024 11:26:18 GMT+0530 (India Standard Time)",
-      "updatedAt": "Sat Feb 03 2024 11:26:18 GMT+0530 (India Standard Time)",
-      "id": "87ef"
+      "address": "mota varachha",
+      "phoneNumber": "123",
+      "email": "finder@gmail.com",
+      "createdAt": "Mon Feb 05 2024 10:18:38 GMT+0530 (India Standard Time)",
+      "updatedAt": "Mon Feb 05 2024 10:18:38 GMT+0530 (India Standard Time)",
+      "status": "inactive",
+      "id": "ee89"
     },
     {
-      "name": "pvr",
+      "name": "db",
       "image": "cinema-halls/cinema-halls1.jpg",
-      "address": "Deepkama, mota varachha",
-      "phoneNumber": "2",
-      "email": "dfghjk@gmail.com",
-      "createdAt": "Sat Feb 03 2024 11:17:47 GMT+0530 (India Standard Time)",
-      "updatedAt": "Sat Feb 03 2024 11:17:47 GMT+0530 (India Standard Time)",
-      "id": "50da"
+      "address": "vesu",
+      "phoneNumber": "45678",
+      "email": "vegamovies@gmail.com",
+      "createdAt": "Mon Feb 05 2024 10:18:30 GMT+0530 (India Standard Time)",
+      "updatedAt": "Mon Feb 05 2024 10:18:30 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "37bc"
     }
   ]
 }

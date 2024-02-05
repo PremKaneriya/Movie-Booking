@@ -12,9 +12,8 @@ const handleUpdate = async (id) => {
         document.getElementById("cinemaAddress").value = userfind.address;
         document.getElementById("cinemaPhoneNumber").value = userfind.phoneNumber;
         document.getElementById("cinemaEmail").value = userfind.email;
+        document.getElementById('status').value = userfind.status;
 
-        const imageElement = document.getElementById("cinemaImage");
-        imageElement.src = `../assets/images/${userfind.image}`;
 
     } catch (error) {
         console.log(error);
@@ -42,6 +41,7 @@ const handleCinemaAdmin = async () => {
     const phoneNumber = document.getElementById("cinemaPhoneNumber").value;
     const id = document.getElementById("id").value;
     const email = document.getElementById("cinemaEmail").value;
+    const status = document.getElementById('status').value;
     
 
     const cinArr = image.split("\\");
@@ -57,6 +57,7 @@ const handleCinemaAdmin = async () => {
         email,
         createdAt,
         updatedAt,
+        status: status || "pending", 
     };
 
     if (id) {
@@ -105,10 +106,10 @@ const displayCinemaData = async () => {
 
         let print = "";
 
-        print += `<table border="1"> <tr><th>Cinema Name</th><th>Cinema Image</th><th>Cinema Address</th><th>Cinema Phone Number</th><th>Cinema Email</th><th>Actions</th></tr>`;
+        print += `<table border="1"> <tr><th>Cinema Name</th><th>Cinema Image</th><th>Cinema Address</th><th>Cinema Phone Number</th><th>Cinema Email</th><th>Status</th><th>Actions</th></tr>`;
 
         cinemaData.map((v) => {
-            print += `<tr><td>${v.name}</td><td><img src="../assets/images/${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td>`;
+            print += `<tr><td>${v.name}</td><td><img src="../assets/images/${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td> <td>${v.status}</td>`;
             print += `<td><i onclick="handleDelete('${v.id}')" style="color: #fff;" class="fa-solid fa-trash "></i>`;
             print += `<i onclick="handleUpdate('${v.id}')" style="color: #fff;" class="fa-solid fa-pen-to-square"></i></td></tr>`;
         });
