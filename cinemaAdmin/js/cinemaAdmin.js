@@ -13,12 +13,26 @@ const handleUpdate = async (id) => {
         document.getElementById("cinemaPhoneNumber").value = userfind.phoneNumber;
         document.getElementById("cinemaEmail").value = userfind.email;
         document.getElementById('status').value = userfind.status;
+        document.getElementById('cinemaImagePreview').src = userfind.image
 
 
     } catch (error) {
         console.log(error);
     }
 };
+
+const handleImage = async () => {
+    const updateImage = document.getElementById('cinemaImage').value;
+
+    const imagePreview = document.getElementById('cinemaImagePreview');
+
+    const src = imagePreview.src = updateImage;
+
+    const arr = updateImage.split("\\");
+
+    document.getElementById("cinemaImagePreview").src = "../assets/images/cinema-halls/"+arr[arr.length-1];
+
+}
 
 const handleDelete = async (id) => {
     try {
@@ -113,8 +127,9 @@ const displayCinemaData = async () => {
             print += `<td><i onclick="handleDelete('${v.id}')" style="color: #fff;" class="fa-solid fa-trash "></i>`;
             print += `<i onclick="handleUpdate('${v.id}')" style="color: #fff;" class="fa-solid fa-pen-to-square"></i></td></tr>`;
         });
-
         print += "</table>";
+
+        
 
         document.getElementById("cinemaTable").innerHTML = print;
     } catch (error) {
