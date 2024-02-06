@@ -13,9 +13,9 @@ const handleUpdate = async (id) => {
         document.getElementById("cinemaPhoneNumber").value = userfind.phoneNumber;
         document.getElementById("cinemaEmail").value = userfind.email;
         document.getElementById('status').value = userfind.status;
-        document.getElementById('cinemaImagePreview').src = userfind.image
 
-
+        const imagePreview = document.getElementById('cinemaImagePreview');
+        imagePreview.src = "../assets/images/" + userfind.image;
     } catch (error) {
         console.log(error);
     }
