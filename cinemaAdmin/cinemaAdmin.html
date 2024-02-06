@@ -37,7 +37,8 @@
         <br />
         <span>Select Cinema Image</span>
         <br />
-        <input type="file" id="cinemaImage" placeholder="Enter Cinema Image" />
+        <input onchange="handleImage()" type="file" id="cinemaImage" placeholder="Enter Cinema Image" />
+        <img src="" alt="" id="cinemaImagePreview" width="100px" height="100px">
         <br />
         <input type="text" id="cinemaAddress" placeholder="Enter Cinema Address" />
         <br />
@@ -59,7 +60,7 @@
 </body>
 <style>
 #cinemaTable {
-    margin: 88px 0 0 0;
+    margin: 200px 0 0 0;
 }
 </style>
 </html>
