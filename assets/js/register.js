@@ -18,7 +18,7 @@ const handleDisplay = async () => {
 
 const handleDelete = async (id) => {
     await fetch(`http://localhost:3000/users/${id}`, {
-        method: 'DELETE',    
+        method: 'DELETE',
     });
     // Optionally, you can refresh the display after deletion
     handleDisplay();
@@ -47,20 +47,28 @@ const handleRegisterForm = async (event) => {
 
     console.log(registerObj);
 
-    const response = await fetch('http://localhost:3000/users', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(registerObj)    
-    });
-    const data = await response.json(); // Added await
+    try {
+        const response = await fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(registerObj)
+        });
 
-    console.log(data);
+        if (response.ok) {
+            window.location.href = "login.html";
+        } else {
+            console.error('Registration failed.');
+        }
 
-    // Refresh the display after registration
-    handleDisplay();
+        // Refresh the display after registration
+        handleDisplay();
+    } catch (error) {
+        console.error(error);
+    }
 };
+
 
 const registerForm = document.getElementById('registerForm');
 registerForm.addEventListener('submit', handleRegisterForm);
