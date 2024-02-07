@@ -13,9 +13,13 @@
 <body>
 
     <form id="movieModule">
+        <input type="hidden" id="id" name="id">
+        <select id="selectCinema">
+        </select>
         <input type="text" id="movieName" placeholder="Enter Movie Name">
         <br> <br>
         <input type="file" name="" id="moviePoster">
+        <img src="" alt="" width="100px" height="100px" id="moviePosterPreview">
         <br> <br>
         <input type="text" id="movieDescription" placeholder="Enter Movie Description">
         <br> <br>
@@ -34,6 +38,10 @@
     <script src="js/movieModu.js"></script>
 </body>
 <style>
+
+    i {
+        cursor: pointer;
+    }
     /* Select styles */
     select {
         width: 100%;

@@ -81,25 +81,48 @@
   "cinema": [
     {
       "name": "gems cinema",
-      "image": "cinema-halls/cinema-halls1.jpg",
+      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
       "address": "v",
-      "phoneNumber": "3",
+      "phoneNumber": "4",
       "email": "gemscinema@gmail.com",
-      "createdAt": "Wed Feb 07 2024 10:29:14 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 10:29:14 GMT+0530 (India Standard Time)",
+      "createdAt": "Wed Feb 07 2024 10:32:34 GMT+0530 (India Standard Time)",
+      "updatedAt": "Wed Feb 07 2024 10:32:34 GMT+0530 (India Standard Time)",
       "status": "active",
       "id": "0e66"
+    },
+    {
+      "name": "k",
+      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
+      "address": "adajan",
+      "phoneNumber": "2",
+      "email": "gemscinema@gmail.com",
+      "createdAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
+      "updatedAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "6761"
+    },
+    {
+      "name": "kishor cinema",
+      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
+      "address": "adajan",
+      "phoneNumber": "2",
+      "email": "gemscinema@gmail.com",
+      "createdAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
+      "updatedAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "6761"
     }
   ],
   "movie": [
     {
-      "id": "53ac",
-      "movieName": "Animal",
+      "id": "6471",
+      "movieName": "Animal Kingdom",
       "moviePoster": "91zTlD7AY1L.jpg",
       "movieDescription": "A violent Movie",
       "movieStatus": "active",
-      "createdAt": "Wed Feb 07 2024 08:39:10 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 08:39:10 GMT+0530 (India Standard Time)"
+      "selectCinema": "0e66",
+      "createdAt": "Wed Feb 07 2024 17:39:46 GMT+0530 (India Standard Time)",
+      "updatedAt": "Wed Feb 07 2024 17:39:46 GMT+0530 (India Standard Time)"
     }
   ]
 }

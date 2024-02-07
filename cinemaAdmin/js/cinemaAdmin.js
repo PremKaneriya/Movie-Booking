@@ -105,7 +105,7 @@ const handleCinemaAdmin = async () => {
         }
     }
 
-
+    // document.getElementById("cinemaForm").reset();
 
     displayCinemaData();
 
