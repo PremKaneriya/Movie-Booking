@@ -1,36 +1,48 @@
+document.getElementById('movieModule').style.display = 'none';
+
 const displayMovie = async () => {
     try {
         const cinemaResponse = await fetch('http://localhost:3000/cinema');
         const cinemaData = await cinemaResponse.json();
-        
-        const response = await fetch('http://localhost:3000/movie');
-        const data = await response.json();
 
-        let print = '<table>';
-        print += '<tr><th>Cinema ID</th><th>Movie Name</th><th>Movie Poster</th><th>Movie Description</th><th>Status</th><th>Actions</th><th>Select</th></tr>';
-        
-        let selectOptions = '';
-        cinemaData.forEach(c => {
-            selectOptions += `<option value="${c.id}">${c.name}</option>`;
+        let print = '<select onchange="handleDisplayMovie()">';
+        print += '<option>Select Cinema</option>';
+        cinemaData.forEach((c) => {
+            print += `<option value="${c.id}">${c.name}</option>`;
         });
-        
-        data.forEach((v) => {
-            let selectTheatre = `<select>${selectOptions}</select>`;
-            print += `<tr><td>${v.id}</td><td>${v.movieName}</td><td><img src="../assets/images/moviePoster/${v.moviePoster}" height="70px" width="70px"></td><td>${v.movieDescription}</td><td>${v.movieStatus}</td>
-            <td><i onclick="handleDelete('${v.id}')" class="fa-solid fa-trash"></i>
-            <i onclick="handleUpdate('${v.id}')" class="fa-solid fa-pen-to-square"></i></td>`;
-            print += `<td>${selectTheatre}</td></tr>`;
-        });
+        print += '</select>';
 
-        print += '</table>';
-
-        document.getElementById("movieTable").innerHTML = print;
+        document.getElementById('selectCinema').innerHTML = print;
     } catch (error) {
         console.error(error);
     }
 }
 
+const handleDisplayMovie = async () => {
+    document.getElementById('movieModule').style.display = 'block';
 
+    try {
+        const response = await fetch('http://localhost:3000/movie');
+        const data = await response.json();
+
+        let print = '<table border="1"><tr><th>Movie Name</th><th>Movie Poster</th><th>Movie Description</th><th>Movie Status</th><th>Actions</th></tr>';
+        data.forEach((m) => {
+            print += '<tr>';
+            print += `<td>${m.movieName}</td>`;
+            print += `<td><img src="../assets/images/moviePoster/${m.moviePoster}" height="70px" width="70px"></td>`;
+            print += `<td>${m.movieDescription}</td>`;
+            print += `<td>${m.movieStatus}</td>`;
+            print += `<td><i onclick="handleDeleteMovie('${m.id}')" class="fa-solid fa-trash"></i>
+            <i onclick="handleUpdateMovie('${m.id}')" class="fa-solid fa-pen-to-square"></i></td>`;
+            print += '</tr>';
+        });
+        print += '</table>';
+
+        document.getElementById('showMovies').innerHTML = print;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 const handleMovieModule = async () => {
     event.preventDefault();
@@ -74,7 +86,6 @@ const handleMovieModule = async () => {
     } catch (error) {
         console.error(error);
     }
-
 }
 
 const movieModule = document.getElementById('movieModule');
