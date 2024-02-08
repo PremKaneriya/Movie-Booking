@@ -25,7 +25,7 @@ const handleUpdateMovie = async (id) => {
         document.getElementById("selectCinema").value = movieUserFind.selectCinema;
 
         const imagePreview = document.getElementById('moviePosterPreview');
-        imagePreview.src = "../assets/images/moviePoster/" + movieUserFind.moviePoster;
+        imagePreview.src = movieUserFind.moviePoster;
 
     } catch (error) {
         console.error(error);
@@ -33,77 +33,35 @@ const handleUpdateMovie = async (id) => {
 }
 
 const handlePreview = async () => {
-    const file = document.getElementById('moviePoster').value;
-    const imagePreview = document.getElementById('moviePosterPreview');
-    imagePreview.src = file;
+    const orgImage = document.getElementById('moviePoster').value;
 
-    const arr = file.split("\\");
+    const arr = orgImage.split("\\");
+
     document.getElementById("moviePosterPreview").src = "../assets/images/moviePoster/" + arr[arr.length - 1];
-
 }
 
-const handleDisplayMovie = async () => {
-    try {
-
-        const cinemaResponse = await fetch("http://localhost:3000/cinema");
-        const cinemaData = await cinemaResponse.json();
-
-        let cinePrint = "";
-        cinemaData.forEach(
-            (c) =>
-                cinePrint += `<option value="${c.id}">${c.name}</option>`
-        );
-        document.getElementById("selectCinema").innerHTML = cinePrint;
-
-        // -------------------------------------------------
-
-        const response = await fetch("http://localhost:3000/movie");
-        const data = await response.json();
-
-        let print =
-            '<table border="1"><tr><th>Movie Name</th><th>Movie Poster</th><th>Movie Description</th><th>Movie Status</th><th>Actions</th><th>Theatre</th></tr>';
-        data.forEach((m) => {
-            print += "<tr>";
-            print += `<td>${m.movieName}</td>`;
-            print += `<td><img src="../assets/images/moviePoster/${m.moviePoster}" height="70px" width="70px"></td>`;
-            print += `<td>${m.movieDescription}</td>`;
-            print += `<td>${m.movieStatus}</td>`;
-            print += `<td><i onclick="handleDeleteMovie('${m.id}')" class="fa-solid fa-trash"></i>
-            <i onclick="handleUpdateMovie('${m.id}')" class="fa-solid fa-pen-to-square"></i></td>`;
-
-            const cinema = cinemaData.find(c => c.id === m.selectCinema);
-            print += `<td>${cinema ? cinema.name : 'N/A'}</td>`;
-            print += "</tr>";
-        });
-        print += "</table>";
-
-        document.getElementById("showMovies").innerHTML = print;
-    } catch (error) {
-        console.error(error);
-    }
-};
 
 const handleMovieModule = async () => {
     event.preventDefault();
 
     const movieName = document.getElementById("movieName").value;
-    const moviePoster = document.getElementById("moviePoster").value;
+    const moviePoster = document.getElementById("moviePosterPreview").src;
     const movieDescription = document.getElementById("movieDescription").value;
     const id = document.getElementById("id").value;
     const movieStatus = document.getElementById("movieStatus").value;
     const selectCinema = document.getElementById("selectCinema").value;
 
-    const arr = moviePoster.split("\\");
-    let fileName = arr[arr.length - 1];
+    const arr = moviePoster.split("//");
 
     const createdAt = new Date().toString();
     const updatedAt = new Date().toString();
 
     const movieObj = {
+        cinemaId,
         movieName,
-        moviePoster: fileName,
+        moviePoster,
         movieDescription,
-        movieStatus : movieStatus || "pending",
+        movieStatus: movieStatus || "pending",
         selectCinema,
         createdAt,
         updatedAt,
@@ -141,7 +99,48 @@ const handleMovieModule = async () => {
         }
     }
 
-    handleDisplayMovie(); 
+    handleDisplayMovie();
+};
+
+const handleDisplayMovie = async () => {
+    try {
+
+        const cinemaResponse = await fetch("http://localhost:3000/cinema");
+        const cinemaData = await cinemaResponse.json();
+
+        let cinePrint = "";
+        cinemaData.forEach(
+            (c) =>
+                cinePrint += `<option value="${c.id}">${c.name}</option>`
+        );
+        document.getElementById("selectCinema").innerHTML = cinePrint;
+
+        // -------------------------------------------------
+
+        const response = await fetch("http://localhost:3000/movie");
+        const data = await response.json();
+
+        let print =
+            '<table border="1"><tr><th>Movie Name</th><th>Movie Poster</th><th>Movie Description</th><th>Movie Status</th><th>Actions</th><th>Theatre</th></tr>';
+        data.forEach((m) => {
+            print += "<tr>";
+            print += `<td>${m.movieName}</td>`;
+            print += `<td><img src="${m.moviePoster}" height="70px" width="70px"></td>`;
+            print += `<td>${m.movieDescription}</td>`;
+            print += `<td>${m.movieStatus}</td>`;
+            print += `<td><i onclick="handleDeleteMovie('${m.id}')" class="fa-solid fa-trash"></i>
+            <i onclick="handleUpdateMovie('${m.id}')" class="fa-solid fa-pen-to-square"></i></td>`;
+
+            const cinema = cinemaData.find(c => c.id === m.selectCinema);
+            print += `<td>${cinema ? cinema.name : 'N/A'}</td>`;
+            print += "</tr>";
+        });
+        print += "</table>";
+
+        document.getElementById("showMovies").innerHTML = print;
+    } catch (error) {
+        console.error(error);
+    }
 };
 
 
