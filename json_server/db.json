@@ -80,49 +80,38 @@
   ],
   "cinema": [
     {
-      "name": "gems cinema",
-      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
-      "address": "v",
-      "phoneNumber": "4",
-      "email": "gemscinema@gmail.com",
-      "createdAt": "Wed Feb 07 2024 10:32:34 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 10:32:34 GMT+0530 (India Standard Time)",
+      "name": "dr world",
+      "image": "http://127.0.0.1:5500/assets/images/cinemahalls/Best-cinema-halls-in-Jaipur.webp",
+      "address": "Deepkamal, inox,  mota varachha",
+      "phoneNumber": "3",
+      "email": "drworld@gmail.com",
+      "createdAt": "Thu Feb 08 2024 08:39:07 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 08:39:07 GMT+0530 (India Standard Time)",
       "status": "active",
-      "id": "0e66"
+      "id": "9f21"
     },
     {
-      "name": "k",
-      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
-      "address": "adajan",
+      "name": "Inox",
+      "image": "http://127.0.0.1:5500/assets/images/cinemahalls/cinema-halls1.jpg",
+      "address": "vesu, ",
       "phoneNumber": "2",
-      "email": "gemscinema@gmail.com",
-      "createdAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
+      "email": "inox@gmail.com",
+      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "status": "active",
-      "id": "6761"
-    },
-    {
-      "name": "kishor cinema",
-      "image": "cinema-halls/Best-cinema-halls-in-Jaipur.webp",
-      "address": "adajan",
-      "phoneNumber": "2",
-      "email": "gemscinema@gmail.com",
-      "createdAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 10:33:03 GMT+0530 (India Standard Time)",
-      "status": "active",
-      "id": "6761"
+      "id": "c45f"
     }
   ],
   "movie": [
     {
-      "id": "6471",
       "movieName": "Animal Kingdom",
-      "moviePoster": "91zTlD7AY1L.jpg",
+      "moviePoster": "http://127.0.0.1:5500/assets/images/moviePoster/91zTlD7AY1L.jpg",
       "movieDescription": "A violent Movie",
-      "movieStatus": "active",
-      "selectCinema": "0e66",
-      "createdAt": "Wed Feb 07 2024 17:39:46 GMT+0530 (India Standard Time)",
-      "updatedAt": "Wed Feb 07 2024 17:39:46 GMT+0530 (India Standard Time)"
+      "movieStatus": "inactive",
+      "selectCinema": "9f21",
+      "createdAt": "Thu Feb 08 2024 09:09:36 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 09:09:36 GMT+0530 (India Standard Time)",
+      "id": "6471"
     }
   ]
 }

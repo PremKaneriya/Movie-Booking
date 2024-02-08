@@ -15,23 +15,22 @@ const handleUpdate = async (id) => {
         document.getElementById('status').value = userfind.status;
 
         const imagePreview = document.getElementById('cinemaImagePreview');
-        imagePreview.src = "../assets/images/" + userfind.image;
+        imagePreview.src = userfind.image;
+
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
     }
 };
 
 const handleImage = async () => {
-    const updateImage = document.getElementById('cinemaImage').value;
+    const orgImage = document.getElementById('cinemaImage').value;
 
-    const imagePreview = document.getElementById('cinemaImagePreview');
+    // const imagePreview = document.getElementById('cinemaImagePreview').value;
 
-    const src = imagePreview.src = updateImage;
+    const arr = orgImage.split("\\");
+    console.log(arr);
 
-    const arr = updateImage.split("\\");
-
-    document.getElementById("cinemaImagePreview").src = "../assets/images/cinema-halls/"+arr[arr.length-1];
-
+    document.getElementById("cinemaImagePreview").src ="../assets/images/cinemahalls/"+arr[arr.length-1]; 
 }
 
 const handleDelete = async (id) => {
@@ -47,10 +46,8 @@ const handleDelete = async (id) => {
 };
 
 const handleCinemaAdmin = async () => {
-    event.preventDefault();
-
     const name = document.getElementById("cinemaName").value;
-    const image = document.getElementById("cinemaImage").value;
+    const image = document.getElementById("cinemaImagePreview").src;
     const address = document.getElementById("cinemaAddress").value;
     const phoneNumber = document.getElementById("cinemaPhoneNumber").value;
     const id = document.getElementById("id").value;
@@ -58,14 +55,15 @@ const handleCinemaAdmin = async () => {
     const status = document.getElementById('status').value;
     
 
-    const cinArr = image.split("\\");
+    const cinArr = image.split("//");
+    console.log(cinArr);
 
     const createdAt = new Date().toString();
     const updatedAt = new Date().toString();
 
     const obj = {
         name,
-        image: "cinema-halls/" + cinArr[cinArr.length - 1],
+        image,
         address,
         phoneNumber,
         email,
@@ -123,7 +121,7 @@ const displayCinemaData = async () => {
         print += `<table border="1"> <tr><th>Cinema Name</th><th>Cinema Image</th><th>Cinema Address</th><th>Cinema Phone Number</th><th>Cinema Email</th><th>Status</th><th>Actions</th></tr>`;
 
         cinemaData.map((v) => {
-            print += `<tr><td>${v.name}</td><td><img src="../assets/images/${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td> <td>${v.status}</td>`;
+            print += `<tr><td>${v.name}</td><td><img src="${v.image}" height="70px" width="70px"></td><td>${v.address}</td><td>${v.phoneNumber}</td><td>${v.email}</td> <td>${v.status}</td>`;
             print += `<td><i onclick="handleDelete('${v.id}')" style="color: #fff;" class="fa-solid fa-trash "></i>`;
             print += `<i onclick="handleUpdate('${v.id}')" style="color: #fff;" class="fa-solid fa-pen-to-square"></i></td></tr>`;
         });
@@ -139,6 +137,9 @@ const displayCinemaData = async () => {
 
 const cinemaAdmin = document.getElementById("cinemaAdmin");
 cinemaAdmin.addEventListener("submit", handleCinemaAdmin);
+
+const handleImageErr = document.getElementById('cinemaImage');
+handleImageErr.addEventListener('change', handleImage)
 
 window.onload = () => {
     displayCinemaData();
