@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    
+
+    <form id="movieModule">
+        <select id="selectCinema">
+
+        </select>
+        <input type="hidden" id="id">
+        <input type="text" id="movieName" placeholder="Enter Movie Name">
+        <br><br>
+        <input type="file" id="movieImage">
+        <br>
+        <img src="" alt="" id="movieImagePreview" width="100px" height="100px">
+        <br><br>
+        <input type="number" id="movieDuration" placeholder="Enter Movie Duration">
+        <br><br>
+        <input type="text" id="movieDescripton" placeholder="Enter Movie Description">
+        <br><br>
+        <select id="status">
+            <option value="">-- Select Status --</option>
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <div id="movieTable"></div>
+
+    <script src="js/movieModu.js"></script>
+</body>
+<style>
+    #movieTable td img {
+        width: 100px;
+    }
+</style>
+</html>
