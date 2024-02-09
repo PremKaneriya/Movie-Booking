@@ -71,7 +71,8 @@
 
 /* Form styles */
 #userForm,
-#cinemaAdmin {
+#cinemaAdmin,
+#movieModule {
     width: 400px;
     margin: -4rem 26rem;
     border: 2px solid #0a0f9c;
@@ -87,9 +88,11 @@
 }
 
 #userForm input,
+#movieModule input,
 #userForm select,
 #cinemaAdmin input,
-#cinemaAdmin select {
+#cinemaAdmin select, 
+#movieModule select {
     width: 100%;
     height: 40px;
     border: none;
@@ -102,7 +105,8 @@
 }
 
 #userForm input[type="submit"],
-#cinemaAdmin input[type="submit"] {
+#cinemaAdmin input[type="submit"] 
+#movieModule input[type="submit"] {
     background-color: #0d1dd2;
     color: #fff;
     font-weight: bold;
@@ -111,12 +115,14 @@
 }
 
 #userForm input[type="submit"]:hover,
-#cinemaAdmin input[type="submit"]:hover {
+#cinemaAdmin input[type="submit"]:hover 
+#movieModule input[type="submit"]:hover {
     background-color: #0a0f9c;
 }
 
 #userForm br,
-#cinemaAdmin br {
+#cinemaAdmin br 
+#movieModule br {
     margin: 10px 0;
 }
 
@@ -195,4 +201,8 @@ td i:hover {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+button {
+    cursor: pointer;
 }
