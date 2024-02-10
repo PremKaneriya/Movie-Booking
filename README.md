@@ -1,1 +1,1 @@
-A JavaScript Project
+An JavaScript Project
