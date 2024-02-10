@@ -125,5 +125,64 @@
       "createdAt": "Fri Feb 09 2024 09:21:56 GMT+0530 (India Standard Time)",
       "updatedAt": "Fri Feb 09 2024 09:21:56 GMT+0530 (India Standard Time)"
     }
+  ],
+  "time": [
+    {
+      "id": "d6c7",
+      "cinemaId": "9f21",
+      "movieId": "0849",
+      "timesData": [
+        "12:34"
+      ],
+      "date": "2024-05-31",
+      "createdAt": "Sat Feb 10 2024 09:03:23 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 10 2024 09:03:23 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "7960",
+      "cinemaId": "c45f",
+      "movieId": "ff9e",
+      "timesData": [
+        "12:34"
+      ],
+      "date": "2024-05-31",
+      "createdAt": "Sat Feb 10 2024 09:03:34 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 10 2024 09:03:34 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "793c",
+      "cinemaId": "9f21",
+      "movieId": "0849",
+      "timesData": [
+        "12:34"
+      ],
+      "date": "2024-05-31",
+      "createdAt": "Sat Feb 10 2024 09:04:51 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 10 2024 09:04:51 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "37ae",
+      "cinemaId": "9f21",
+      "movieId": "0849",
+      "timesData": [
+        "12:34"
+      ],
+      "date": "2024-05-23",
+      "createdAt": "Sat Feb 10 2024 09:14:09 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 10 2024 09:14:09 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "ba46",
+      "cinemaId": "9f21",
+      "movieId": "0849",
+      "timesData": [
+        "12:34",
+        "11:23",
+        "12:24"
+      ],
+      "date": "2025-06-24",
+      "createdAt": "Sat Feb 10 2024 09:21:36 GMT+0530 (India Standard Time)",
+      "updatedAt": "Sat Feb 10 2024 09:21:36 GMT+0530 (India Standard Time)"
+    }
   ]
 }
