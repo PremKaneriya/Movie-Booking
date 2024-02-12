@@ -13,17 +13,17 @@ const handleDisplay = async () => {
     let print = '';
     print += '<table border="1"><tr><th>Cinema Name</th><th> Movie Name</th><th>Movie Time</th><th>Movie Date</th><th>Actions </th> </tr>';
     data.map((v) => {
-       
+
         const cinema = cinemaData.find((c) => c.id === v.cinemaId);
         const movie = movieData.find((m) => m.id === v.movieId);
-        
+
         print += '<tr>';
         print += `<td>${cinema.name}</td>`;
         print += `<td>${movie.name}</td>`;
         print += `<td>${v.timesData}</td>`;
         print += `<td>${v.date}</td>`;
-        print += `<td><button onclick="handleDelete(${v.id})">Delete</button>
-        <button onclick="handleUpdate(${v.id})">Update</button></td>`;
+        print += `<td><button onclick="handleDelete('${v.id}')">Delete</button>
+        <button onclick="handleUpdate(event,'${v.id}')">Update</button></td>`;
         print += '</tr>';
     })
     print += '</table>';
@@ -35,8 +35,43 @@ const handleRemoveTime = async (id) => {
     document.getElementById(`row-${id}`).remove();
 }
 
-const handleAddTime = async () => {
-    event.preventDefault()
+const handleUpdate = async (event, id) => {
+    try {
+        const response = await fetch(`http://localhost:3000/time`)
+        const data = await response.json();
+
+        const time = data.find((v) => v.id === id);
+
+        document.getElementById('selectDate').value = time.date;
+        document.getElementById('selectCinema').value = time.cinemaId;
+        document.getElementById('selectMovies').value = time.movieId;
+        document.getElementsByName('movie_time').value = time.timesData;
+        
+
+        document.getElementById('allTimes').innerHTML = '';
+
+        for (i = 0; i < time.timesData.length; i++) {
+            handleAddTime(event, time.timesData[i]);
+
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const handleDelete = async (id) => {
+    try {
+        const response = await fetch(`http://localhost:3000/time/${id}`, {
+            method: 'DELETE',
+        })
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const handleAddTime = async (event ,value='') => {
     let rNo = Math.floor(Math.random() * 10000)
 
     const div = document.createElement('div');
@@ -45,20 +80,24 @@ const handleAddTime = async () => {
     const input = document.createElement('input');
     input.setAttribute('type', 'time');
     input.setAttribute('name', 'movie_time');
+    input.setAttribute('value', value);
 
     const addButton = document.createElement('button');
-    addButton.setAttribute('onclick', `handleAddTime(${rNo})`);
+    addButton.setAttribute('onclick', `handleAddTime(${rNo}, event));`);
     const addnode = document.createTextNode('+');
     addButton.appendChild(addnode);
 
-    const removeButton = document.createElement('button');
-    removeButton.setAttribute('onclick', `handleRemoveTime(${rNo})`);
-    const removenode = document.createTextNode('-');
-    removeButton.appendChild(removenode);
-
     div.appendChild(input);
     div.appendChild(addButton);
-    div.appendChild(removeButton);
+
+    if (document.getElementById("allTimes").children.length > 0) {
+        const removeBtn = document.createElement('button');
+        removeBtn.setAttribute('onclick', `handleRemoveTime(${rNo})`);
+        const removenode = document.createTextNode('-');
+        removeBtn.appendChild(removenode);
+
+        div.appendChild(removeBtn);
+    }
 
     const allTimes = document.getElementById('allTimes');
     allTimes.appendChild(div);

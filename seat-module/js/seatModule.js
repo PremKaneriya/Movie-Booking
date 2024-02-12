@@ -18,10 +18,14 @@ const handleSelectCinema = async () => {
 const handleMovieSlect = async () => {
 
     try {
+        const selectCinema = document.getElementById('selectCinema');
         const response =  await fetch(`http://localhost:3000/movie`);
         const data =  await response.json();
+
+        const newData = data.filter((v) => v.cinemaId == selectCinema.value)
+
         let print = '<option value="0">-- Select Cinema --</option>';
-        data.map((v) => {
+        newData.map((v) => {
             print += `<option value="${v.id}">${v.name}</option>`;
         });
         document.getElementById('selectMovie').innerHTML = print;
@@ -34,10 +38,14 @@ const handleMovieSlect = async () => {
 
 const handleTimeSelect = async () => {
     try {
+        const selectMovie = document.getElementById('selectMovie');
         const response =  await fetch(`http://localhost:3000/time`);
         const data =  await response.json();
+
+        const newData = data.filter((v) => v.movieId == selectMovie.value)
+
         let print = '<option value="0">-- Select Time --</option>';
-        data.map((v) => {
+        newData.map((v) => {
             print += `<option value="${v.id}">${v.timesData}</option>`
         })
         document.getElementById('selectTime').innerHTML = print;
