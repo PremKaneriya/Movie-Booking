@@ -42,18 +42,22 @@ const handleUpdate = async (event, id) => {
 
         const time = data.find((v) => v.id === id);
 
+        document.getElementById('hiddenId').value = time.id
         document.getElementById('selectDate').value = time.date;
         document.getElementById('selectCinema').value = time.cinemaId;
+        
+        await handleSelectMovie();
+
         document.getElementById('selectMovies').value = time.movieId;
+
         document.getElementsByName('movie_time').value = time.timesData;
         
 
         document.getElementById('allTimes').innerHTML = '';
 
-        for (i = 0; i < time.timesData.length; i++) {
-            handleAddTime(event, time.timesData[i]);
-
-        }
+        time.timesData.forEach((timeValue) => {
+            handleAddTime(event, timeValue);
+        });
 
     } catch (error) {
         console.error(error);
@@ -140,6 +144,7 @@ const handleAdmin = async () => {
                 body: JSON.stringify(timeObj)
             });
             const data = await response.json();
+            handleDisplay();
         } catch (error) {
             console.log(error);
         }
@@ -153,6 +158,7 @@ const handleAdmin = async () => {
                 body: JSON.stringify(timeObj)
             });
             const data = await response.json();
+            handleDisplay();
         } catch (error) {
             console.log(error);
         }
@@ -175,7 +181,7 @@ const handleSelectCinema = async () => {
 }
 
 const handleSelectMovie = async () => {
-    event.preventDefault()
+    
     var cinemaId = document.getElementById('selectCinema').value;
 
     const response = await fetch(`http://localhost:3000/movie`);
