@@ -9,6 +9,7 @@
 
 <body>
     <form id="seatForm">
+        <input type="hidden" id="hiddenId">
         <select id="selectCinema"></select>
         <br />
         <br />
@@ -18,16 +19,17 @@
         <select id="selectTime"></select>
         <br />
         <br />
-        <button>No Of Seats</button>
+        <input type="number" id="ticketPrice" placeholder="Enter Ticket Price">
         <br />
         <br />
-        <button>Price</button>
+        <input type="number" id="numberOfSeat" placeholder="Number of seat">
         <br />
         <br />
         <input type="submit" />
     </form>
 
+    <div id="displaySeat"></div>
+
     <script src="js/seatModule.js"></script>
 </body>
-
 </html>

@@ -35,6 +35,8 @@ const handleRemoveTime = async (id) => {
     document.getElementById(`row-${id}`).remove();
 }
 
+
+
 const handleUpdate = async (event, id) => {
     try {
         const response = await fetch(`http://localhost:3000/time`)
@@ -45,13 +47,13 @@ const handleUpdate = async (event, id) => {
         document.getElementById('hiddenId').value = time.id
         document.getElementById('selectDate').value = time.date;
         document.getElementById('selectCinema').value = time.cinemaId;
-        
+
         await handleSelectMovie();
 
         document.getElementById('selectMovies').value = time.movieId;
 
         document.getElementsByName('movie_time').value = time.timesData;
-        
+
 
         document.getElementById('allTimes').innerHTML = '';
 
@@ -75,7 +77,7 @@ const handleDelete = async (id) => {
     }
 }
 
-const handleAddTime = async (event ,value='') => {
+const handleAddTime = async (event, value = '') => {
     let rNo = Math.floor(Math.random() * 10000)
 
     const div = document.createElement('div');
@@ -181,7 +183,7 @@ const handleSelectCinema = async () => {
 }
 
 const handleSelectMovie = async () => {
-    
+
     var cinemaId = document.getElementById('selectCinema').value;
 
     const response = await fetch(`http://localhost:3000/movie`);
