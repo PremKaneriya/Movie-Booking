@@ -80,10 +80,10 @@
   ],
   "cinema": [
     {
-      "name": "dr world",
-      "image": "http://127.0.0.1:5500/assets/images/cinemahalls/Best-cinema-halls-in-Jaipur.webp",
-      "address": "Deepkamal, inox,  mota varachha",
-      "phoneNumber": "3",
+      "name": "Dr World",
+      "image": "https://cdn.zeebiz.com/sites/default/files/2023/10/16/265005-pvr-inox-file.jpg?im=FitAndFill=(1200,900)",
+      "address": "Deepkamal Mall",
+      "phoneNumber": "998877",
       "email": "drworld@gmail.com",
       "createdAt": "Thu Feb 08 2024 08:39:07 GMT+0530 (India Standard Time)",
       "updatedAt": "Thu Feb 08 2024 08:39:07 GMT+0530 (India Standard Time)",
@@ -92,10 +92,32 @@
     },
     {
       "name": "Inox",
-      "image": "http://127.0.0.1:5500/assets/images/cinemahalls/cinema-halls1.jpg",
-      "address": "vesu, ",
-      "phoneNumber": "2",
+      "image": "https://d18hry5vavz86j.cloudfront.net/TheaterImages/e45745f2-776c-4df0-9599-be4687dd809d.JPG",
+      "address": "Vesu",
+      "phoneNumber": "112442",
       "email": "inox@gmail.com",
+      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "c45f"
+    },
+    {
+      "name": "PVR",
+      "image": "https://cdn.zeebiz.com/sites/default/files/2022/11/25/212705-bf5spjoat5pgflk3o6d5uveccq.jpg",
+      "address": "Rahul Raj ",
+      "phoneNumber": "775424",
+      "email": "pvr@gmail.com",
+      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "c45f"
+    },
+    {
+      "name": "CinePolis",
+      "image": "https://imgmedia.lbb.in/media/2019/09/5d8b246387b34c266034c8e0_1569399907531.jpg",
+      "address": "Adajan ",
+      "phoneNumber": "5544337",
+      "email": "cinepolis@gmail.com",
       "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "status": "active",
@@ -124,6 +146,39 @@
       "status": "active",
       "createdAt": "Fri Feb 09 2024 09:21:56 GMT+0530 (India Standard Time)",
       "updatedAt": "Fri Feb 09 2024 09:21:56 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "d1b5",
+      "cinemaId": "0",
+      "name": "Hanuman",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/aa92130b5dcbb96bd933c40ae7d798e2.jpg",
+      "duration": "200",
+      "description": "A india SuperHero",
+      "status": "active",
+      "createdAt": "Tue Feb 13 2024 11:49:23 GMT+0530 (India Standard Time)",
+      "updatedAt": "Tue Feb 13 2024 11:49:23 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "12c7",
+      "cinemaId": "c45f",
+      "name": "Fighter",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/MV5BZjkwN2Q5Y2QtMmE2MC00NzlkLTg2NzQtYjVjYjVmNjE2ZTNiXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "duration": "180",
+      "description": "Maverick",
+      "status": "active",
+      "createdAt": "Tue Feb 13 2024 11:50:58 GMT+0530 (India Standard Time)",
+      "updatedAt": "Tue Feb 13 2024 11:50:58 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "1ce0",
+      "cinemaId": "0",
+      "name": "Teri Batton Mai",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/Teri_Baaton_Mein_Aisa_Uljha_Jiya_film_poster.jpg",
+      "duration": "122",
+      "description": "A Romantic Movie",
+      "status": "active",
+      "createdAt": "Tue Feb 13 2024 14:15:17 GMT+0530 (India Standard Time)",
+      "updatedAt": "Tue Feb 13 2024 14:15:17 GMT+0530 (India Standard Time)"
     }
   ],
   "time": [
