@@ -149,7 +149,7 @@
     },
     {
       "id": "d1b5",
-      "cinemaId": "0",
+      "cinemaId": "9f21",
       "name": "Hanuman",
       "image": "http://127.0.0.1:5500/assets/images/moviePoster/aa92130b5dcbb96bd933c40ae7d798e2.jpg",
       "duration": "200",
@@ -171,7 +171,7 @@
     },
     {
       "id": "1ce0",
-      "cinemaId": "0",
+      "cinemaId": "c45f",
       "name": "Teri Batton Mai",
       "image": "http://127.0.0.1:5500/assets/images/moviePoster/Teri_Baaton_Mein_Aisa_Uljha_Jiya_film_poster.jpg",
       "duration": "122",
