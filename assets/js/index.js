@@ -22,16 +22,21 @@ const movie = async () => {
     const response = await fetch('http://localhost:3000/movie');
     const data = await response.json();
 
+    const uniqueMovieNames = new Set();
+
     let print = '';
-    data.map((v) => {
-        print += `<div class="movieCard">
-            <div>${v.name}</div>
-            <img id="movieImage" src="${v.image}" alt="${v.name}"/>
-            <p>${v.duration}</p>
-            <p>${v.description}</p>
-            <p>${v.status}</p>
-        </div>`;
-    })
+    data.forEach((v) => {
+        if (!uniqueMovieNames.has(v.name)) {
+            print += `<div class="movieCard">
+               <div>${v.name}</div>
+               <img id="movieImage" src="${v.image}" alt="${v.name}"/>
+               <p>${v.duration}</p>
+               <p>${v.description}</p>
+               <p>${v.status}</p>
+           </div>`;
+            uniqueMovieNames.add(v.name);
+        }
+    });
 
     document.getElementById("movieContainer").innerHTML = print;
 }
