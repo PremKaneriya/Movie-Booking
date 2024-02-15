@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="showMovie"></div>
+
+    <div id="cinemaList"></div>
+    <script src="cinemaOpen.js"></script>
+</body>
+<style>
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #spanMovie {
+        color:#000;
+    }
+
+    #cinemaName {
+        font-size: 44px;
+        font-weight: bold;
+        color: darkblue;
+        margin: 20px 0 0 20px;
+    }
+
+    #showMovie {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+        margin: 20px 0 0 20px;
+    }
+
+    #cinemaList {
+        display: flex;
+    }
+
+    #movieCard {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px;
+        border: 3px solid #ccc;
+    }
+
+    #movieCard div {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 5px;
+
+    }
+
+    #movieCard img {
+        width: 200px;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    #movieCard p {
+        font-size: 16px;
+        color: #666666;
+    }
+</style>
+
+</html>
