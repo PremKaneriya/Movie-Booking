@@ -100,28 +100,6 @@
       "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "status": "active",
       "id": "c45f"
-    },
-    {
-      "name": "PVR",
-      "image": "https://cdn.zeebiz.com/sites/default/files/2022/11/25/212705-bf5spjoat5pgflk3o6d5uveccq.jpg",
-      "address": "Rahul Raj ",
-      "phoneNumber": "775424",
-      "email": "pvr@gmail.com",
-      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
-      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
-      "status": "active",
-      "id": "c45f"
-    },
-    {
-      "name": "CinePolis",
-      "image": "https://imgmedia.lbb.in/media/2019/09/5d8b246387b34c266034c8e0_1569399907531.jpg",
-      "address": "Adajan ",
-      "phoneNumber": "5544337",
-      "email": "cinepolis@gmail.com",
-      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
-      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
-      "status": "active",
-      "id": "c45f"
     }
   ],
   "movie": [
@@ -186,25 +164,12 @@
       "cinemaId": "9f21",
       "movieId": "0849",
       "timesData": [
-        "12:30",
-        "11:30",
-        "23:30"
-      ],
-      "date": "2030-06-24",
-      "createdAt": "Mon Feb 12 2024 15:32:25 GMT+0530 (India Standard Time)",
-      "updatedAt": "Mon Feb 12 2024 15:32:25 GMT+0530 (India Standard Time)",
-      "id": "ba46"
-    },
-    {
-      "cinemaId": "9f21",
-      "movieId": "0849",
-      "timesData": [
-        "21:16",
+        "21:15",
         "16:15"
       ],
       "date": "2025-01-01",
-      "createdAt": "Mon Feb 12 2024 15:31:59 GMT+0530 (India Standard Time)",
-      "updatedAt": "Mon Feb 12 2024 15:31:59 GMT+0530 (India Standard Time)",
+      "createdAt": "Thu Feb 15 2024 08:39:45 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 08:39:45 GMT+0530 (India Standard Time)",
       "id": "ca05"
     },
     {
@@ -217,6 +182,39 @@
       "createdAt": "Mon Feb 12 2024 15:31:50 GMT+0530 (India Standard Time)",
       "updatedAt": "Mon Feb 12 2024 15:31:50 GMT+0530 (India Standard Time)",
       "id": "a00a"
+    },
+    {
+      "id": "d53b",
+      "cinemaId": "9f21",
+      "movieId": "d1b5",
+      "timesData": [
+        "11:23"
+      ],
+      "date": "2025-04-16",
+      "createdAt": "Thu Feb 15 2024 09:21:48 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 09:21:48 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "9fba",
+      "cinemaId": "c45f",
+      "movieId": "12c7",
+      "timesData": [
+        "11:26"
+      ],
+      "date": "2025-04-16",
+      "createdAt": "Thu Feb 15 2024 09:22:02 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 09:22:02 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "4cb7",
+      "cinemaId": "c45f",
+      "movieId": "1ce0",
+      "timesData": [
+        "14:26"
+      ],
+      "date": "2027-05-20",
+      "createdAt": "Thu Feb 15 2024 09:22:13 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 09:22:13 GMT+0530 (India Standard Time)"
     }
   ],
   "seat": [

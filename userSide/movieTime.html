@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="movieDisplay"></div>
+        <div id="selectTime"></div>
+    </div>
+    <script src="movieTime.js"></script>
+</body>
+<style>
+    #main {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 21px;
+    }
+
+    * {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #movieCard {
+        width: 100%;
+        max-width: 800px;
+        /* Adjust as needed */
+        margin: 0 auto;
+        background-color: #ffffff;
+        /* Background color */
+        border-radius: 10px;
+        /* Rounded corners */
+        padding: 20px;
+        /* Spacing inside the card */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Box shadow for depth */
+    }
+
+    #movieCard div {
+        font-size: 24px;
+        /* Heading font size */
+        font-weight: bold;
+        /* Heading font weight */
+        margin-bottom: 10px;
+        /* Spacing between heading and image */
+    }
+
+    #movieImage {
+        width: 200px;
+        max-width: 100%;
+        /* Ensure image doesn't exceed container width */
+        display: block;
+        /* Ensure image is centered */
+        border-radius: 10px;
+        /* Rounded corners for the image */
+        margin-bottom: 10px;
+        /* Spacing between image and paragraphs */
+    }
+
+    #movieCard p {
+        margin: 5px 0;
+        /* Spacing between paragraphs */
+        font-size: 16px;
+        /* Font size */
+    }
+
+    #spanMovie {
+        font-weight: bold;
+        /* Bold font weight for span elements */
+    }
+
+    #timeCard {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 133px 51px;
+        border: 2px solid #ccc;
+    }
+
+    #timeCard p {
+        margin: 5px 0;
+        /* Spacing between paragraphs */
+        font-size: 16px;
+        /* Font size */
+    }
+
+    #spanTime {
+        font-weight: bold;
+        /* Bold font weight for span elements */
+    }
+</style>
+
+</html>
