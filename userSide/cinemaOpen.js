@@ -7,7 +7,7 @@ const openCinema = async () => {
 
     console.log(data);
 
-    document.getElementById("showMovie").innerHTML = `You Are In: <span id="cinemaName">${data.name}</span>, Welcome`;
+    document.getElementById("showMovie").innerHTML = `You Are In : <span id="cinemaName">${data.name}</span>, Welcome`;
     
 }
 
@@ -27,10 +27,7 @@ const openMovie = async () => {
 
         print += `<div id="movieCard">
         <div>${v.name}</div>
-        <img id="movieImage" src="${v.image}" alt="${v.name}">
-        <p><span id="spanMovie">Duration</span> : ${v.duration}</p>
-        <p><span id="spanMovie">Description</span> : ${v.description}</p>
-        <p><span id="spanMovie">status</span> : ${v.status}</p>
+        <center><img id="movieImage" src="${v.image}" alt="${v.name}"> </center>
         <button onclick="handleSelectMovie('${v.id}')">Select</button>
         </div>`
     })

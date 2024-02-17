@@ -82,7 +82,7 @@
     {
       "name": "Dr World",
       "image": "https://cdn.zeebiz.com/sites/default/files/2023/10/16/265005-pvr-inox-file.jpg?im=FitAndFill=(1200,900)",
-      "address": "Deepkamal Mall",
+      "address": "Aai Mata Road",
       "phoneNumber": "998877",
       "email": "drworld@gmail.com",
       "createdAt": "Thu Feb 08 2024 08:39:07 GMT+0530 (India Standard Time)",
@@ -93,13 +93,24 @@
     {
       "name": "Inox",
       "image": "https://d18hry5vavz86j.cloudfront.net/TheaterImages/e45745f2-776c-4df0-9599-be4687dd809d.JPG",
-      "address": "Vesu",
+      "address": "Mota Varachha",
       "phoneNumber": "112442",
       "email": "inox@gmail.com",
       "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
       "status": "active",
       "id": "c45f"
+    },
+    {
+      "name": "PVR",
+      "image": "https://www.hindustantimes.com/ht-img/img/2023/10/14/1600x900/PVR-INOX-RESULTS--0_1697296390571_1697296439880.JPG",
+      "address": "City Light",
+      "phoneNumber": "345345",
+      "email": "pvr@gmail.com",
+      "createdAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 08 2024 08:38:56 GMT+0530 (India Standard Time)",
+      "status": "active",
+      "id": "p45f"
     }
   ],
   "movie": [
@@ -157,6 +168,39 @@
       "status": "active",
       "createdAt": "Tue Feb 13 2024 14:15:17 GMT+0530 (India Standard Time)",
       "updatedAt": "Tue Feb 13 2024 14:15:17 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "8241",
+      "cinemaId": "p45f",
+      "name": "Oppenheimer",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/Oppenheimer-CillianMurphy-ChristopherNolan-HollywoodMoviePoster_1_grande.webp",
+      "duration": "240",
+      "description": "A Biography",
+      "status": "active",
+      "createdAt": "Thu Feb 15 2024 15:09:33 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:09:33 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "007a",
+      "cinemaId": "p45f",
+      "name": "Interstellar",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/5XMXTR36RRDZHJY7VKLKKEMDQA.avif",
+      "duration": "224",
+      "description": "A SCIFI",
+      "status": "active",
+      "createdAt": "Thu Feb 15 2024 15:10:44 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:10:44 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "525c",
+      "cinemaId": "p45f",
+      "name": "1917",
+      "image": "http://127.0.0.1:5500/assets/images/moviePoster/1917_-_Sam_Mendes_-_Hollywood_War_Film_Classic_English_Movie_Poster_a12704bd-2b25-4aa7-8c8d-8f40cf467dc7_large.webp",
+      "duration": "180",
+      "description": "A War Movie",
+      "status": "active",
+      "createdAt": "Thu Feb 15 2024 15:11:16 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:11:16 GMT+0530 (India Standard Time)"
     }
   ],
   "time": [
@@ -165,7 +209,8 @@
       "movieId": "0849",
       "timesData": [
         "21:15",
-        "16:15"
+        "16:15",
+        "14:15"
       ],
       "date": "2025-01-01",
       "createdAt": "Thu Feb 15 2024 08:39:45 GMT+0530 (India Standard Time)",
@@ -176,7 +221,9 @@
       "cinemaId": "c45f",
       "movieId": "ff9e",
       "timesData": [
-        "23:16"
+        "23:16",
+        "14:16",
+        "7:16"
       ],
       "date": "2060-03-02",
       "createdAt": "Mon Feb 12 2024 15:31:50 GMT+0530 (India Standard Time)",
@@ -188,7 +235,9 @@
       "cinemaId": "9f21",
       "movieId": "d1b5",
       "timesData": [
-        "11:23"
+        "11:23",
+        "14:23",
+        "12:23"
       ],
       "date": "2025-04-16",
       "createdAt": "Thu Feb 15 2024 09:21:48 GMT+0530 (India Standard Time)",
@@ -199,7 +248,8 @@
       "cinemaId": "c45f",
       "movieId": "12c7",
       "timesData": [
-        "11:26"
+        "11:26",
+        "11:56"
       ],
       "date": "2025-04-16",
       "createdAt": "Thu Feb 15 2024 09:22:02 GMT+0530 (India Standard Time)",
@@ -210,11 +260,48 @@
       "cinemaId": "c45f",
       "movieId": "1ce0",
       "timesData": [
-        "14:26"
+        "14:26",
+        "13:26"
       ],
       "date": "2027-05-20",
       "createdAt": "Thu Feb 15 2024 09:22:13 GMT+0530 (India Standard Time)",
       "updatedAt": "Thu Feb 15 2024 09:22:13 GMT+0530 (India Standard Time)"
+    },
+    {
+      "id": "09de",
+      "cinemaId": "p45f",
+      "movieId": "8241",
+      "timesData": [
+        "07:17",
+        "02:17"
+      ],
+      "date": "2026-03-16",
+      "createdAt": "Thu Feb 15 2024 15:12:38 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:12:38 GMT+0530 (India Standard Time)"
+    },
+    {
+      "cinemaId": "p45f",
+      "movieId": "007a",
+      "timesData": [
+        "14:18",
+        "1:18"
+      ],
+      "date": "2038-07-09",
+      "createdAt": "Thu Feb 15 2024 15:13:41 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:13:41 GMT+0530 (India Standard Time)",
+      "id": "b8cd"
+    },
+    {
+      "id": "a545",
+      "cinemaId": "p45f",
+      "movieId": "525c",
+      "timesData": [
+        "05:17",
+        "03:17"
+      ],
+      "date": "2026-06-19",
+      "createdAt": "Thu Feb 15 2024 15:14:05 GMT+0530 (India Standard Time)",
+      "updatedAt": "Thu Feb 15 2024 15:14:05 GMT+0530 (India Standard Time)"
     }
   ],
   "seat": [

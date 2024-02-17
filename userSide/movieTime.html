@@ -8,14 +8,51 @@
 </head>
 
 <body>
-    <div id="main">
 
+    <div id="cinemaNameInner"></div>
+    <div id="main">
+        <br>
         <div id="movieDisplay"></div>
-        <div id="selectTime"></div>
+
+        <form action="" id="handle_sumbit">
+            <input type="date" hidden id="admin_date" value="">
+
+            <span class=""> Select Date:</span>
+            <input type="date" name="select_date" id="s_date">
+            <span class="details_divices-tittle"> Available Time:</span>
+            <div id="time">
+
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
     </div>
+
+
     <script src="movieTime.js"></script>
 </body>
 <style>
+    #nextBtn {
+        width: 40%;
+        margin: 10px 0 0 110px;
+        background: orangered;
+
+    }
+
+    #cinemaNameH1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 20px 0 20px 20px;
+    }
+
+    #cinemaName {
+        font-size: 44px;
+        font-weight: bold;
+        color: darkblue;
+        margin: 20px 0 0 20px;
+        text-align: center;
+    }
+
     #main {
         display: flex;
         border: 1px solid black;
@@ -23,8 +60,20 @@
         padding: 21px;
     }
 
+    button {
+        width: 100%;
+        background: darkblue;
+        color: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        padding: 6px;
+        margin: 10px;
+    }
+
     * {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     #movieCard {
