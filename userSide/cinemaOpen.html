@@ -15,12 +15,30 @@
     <script src="cinemaOpen.js"></script>
 </body>
 <style>
+    button:hover {
+        background-color: #5b19ff;
+    }
+
+    button {
+        transition: all 0.2s ease;
+        width: 100%;
+        background: darkblue;
+        color: white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        padding: 6px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
     * {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     #spanMovie {
-        color:#000;
+        color: #000;
     }
 
     #cinemaName {
@@ -28,6 +46,7 @@
         font-weight: bold;
         color: darkblue;
         margin: 20px 0 0 20px;
+        text-align: center;
     }
 
     #showMovie {
