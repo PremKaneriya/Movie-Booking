@@ -8,28 +8,47 @@
 </head>
 
 <body>
-    <form id="seatForm">
-        <input type="hidden" id="hiddenId">
-        <select id="selectCinema"></select>
-        <br />
-        <br />
-        <select id="selectMovie"></select>
-        <br />
-        <br />
-        <select id="selectTime"></select>
-        <br />
-        <br />
-        <input type="number" id="ticketPrice" placeholder="Enter Ticket Price">
-        <br />
-        <br />
-        <input type="number" id="numberOfSeat" placeholder="Number of seat">
-        <br />
-        <br />
-        <input type="submit" />
+
+    <form action="#" class="my-form" id="movieuser">
+
+        <input type="hidden" name="id" id="id">
+        <div class="input-box" id="">
+            <select name="" class="seclet-filed" id="movietime"></select>
+        </div>
+
+        <div class="input-box" id="">
+            <select name="" class="seclet-filed" id="time"></select>
+        </div>
+
+        <div class="input-box" id="">
+            <select name="" class="seclet-filed" id="time_movie"></select>
+        </div>
+
+        <label for="name">Movie seat:</label>
+        <input type="number" id="Seatnumber" name="name" placeholder="movie seat">
+        <label for="name">ticket price:</label>
+        <input type="number" id="price" name="name" placeholder="ticket price">
+        <label for="name">Select Show's Time</label>
+        <input type="date" id="date" name="name" placeholder="date">
+
+        <input type="submit" value="Submit">
     </form>
+
+
+    <div id="movietimeshow">
+
+    </div>
+
+
+    <div id="disp"></div>
+
+
+    </div>
+
 
     <div id="displaySeat"></div>
 
     <script src="js/seatModule.js"></script>
 </body>
+
 </html>

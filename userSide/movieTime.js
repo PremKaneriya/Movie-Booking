@@ -48,6 +48,7 @@ const displayTime = async (id) => {
 
         let timePrint = '';
         newTimeData.forEach((v) => {
+            timePrint += `<h3 id="Dispdate">End Date: ${date}</h3>`;
             v.timesData.forEach((t) => {
                 timePrint += ` <input class="btn" type="radio" name="timesMovie" id="${t}" value="${t}">
                 <label for="${t}">${t}</label>`
@@ -77,6 +78,7 @@ const handleSubmitForm = async () => {
     } else {
         localStorage.setItem("time", user_time);
         localStorage.setItem("date", user_date);
+        window.location.href = '/userSide/seat.html'
     } 
 }
 
