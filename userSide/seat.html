@@ -2,16 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 <body>
+    <div class="screen">
+        <div class="screen-content">
+            <h1 class="movie-title">Star Wars : Galazy</h1>
+            <p class="movie-info">
+                Duration: 2h 30m | Genre: Action | Rating: PG-13
+            </p>
+            <div class="video-player">
+                <video src="/assets/videos/Ahsoka Official Trailer Disney+.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+    </div>
 
-    <div id="screen"></div>
-
-
+    <center>
+        <div id="seatButtons"></div>
+    </center>
+    <div id="priceDisplay"></div>
+    <center>
+        <button id="bookButton" onclick="handleBooking()">Book Now</button>
+    </center>
     <script src="seat.js"></script>
 </body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #bookButton {
+        margin-top: 14px;
+        padding: 8px 19px;
+        font-size: 14px;
+        border-radius: 10px;
+        border: 2px solid black;
+        background: red;
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    #bookButton:hover {
+        background-color: rgb(203, 0, 0);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .seat-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #seatButtons {
+        width: 50%;
+    }
+
+    .seat {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #0d6efd;
+        /* Default seat color */
+        color: #fff;
+    }
+
+    .seat.unbooked:hover {
+        background-color: #007bff;
+        /* Hover color for unbooked seats */
+    }
+
+    .seat.selected {
+        background-color: #28a745;
+        /* Color for selected seats */
+    }
+
+    .seat.booked {
+        background-color: #dc3545;
+        /* Color for booked seats */
+    }
+
+    .price-display {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #priceDisplay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .screen {
+        background-color: #000;
+        height: 500px;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .screen-content {
+        text-align: center;
+    }
+
+    .movie-title {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .movie-info {
+        color: #ccc;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .video-player {
+        /* Styling for the video player component */
+        /* For demonstration purposes, you can add a border to simulate the video player */
+        border: 2px solid #fff;
+        width: 40rem;
+        background-color: #000;
+        color: #fff;
+        margin: 0 auto;
+    }
+</style>
+
 </html>
